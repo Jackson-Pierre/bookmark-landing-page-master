@@ -10,3 +10,74 @@
 html {
     scroll-behavior: smooth;
 }
+
+:root {
+    --primary-color: hsl(231, 69%, 60%);
+    --secondary-color: hsl(0, 94%, 66%);
+    --neutral-white: hsl(0, 0%, 97%);
+    --neutral-gray: hsl(229, 31%, 21%);
+    --theme: hsl(0, 0%, 100%);
+    --primary-color-font: hsl(0, 0%, 0%);
+    --secondary-color-font: hsla(0, 0%, 0%, 0.4);
+    --inversor-font: hsl(0, 0%, 100%);
+}
+
+body.dark {
+    --neutral-white: hsl(250, 100%, 6%);
+    --neutral-gray: hsl(230, 21%, 5%);
+    --theme: hsl(249, 100%, 10%);
+    --primary-color-font: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--theme);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    padding: 2rem 0 1rem 0;
+    background-color: var(--theme);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+
+    a{
+        color: var(--primary-color-font);
+        transition: 0.3s;
+
+        &:hover{
+            color: var(--secondary-color);
+        }
+    }
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btn-theme{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 2rem;
+
+    img{
+        width: 100%;
+    }
+}
