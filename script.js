@@ -75,8 +75,6 @@ function showAnswer(render){
     });
 }
 
-
-
 form.addEventListener("submit", function(e){
     e.preventDefault();
 
@@ -98,4 +96,3 @@ inputEmail.addEventListener("input", function(){
 
 btnTheme.addEventListener('click', toggleTheme)
 btnHamburguer.addEventListener('click', openMenu)
-btnSubmit.addEventListener("click", verification);

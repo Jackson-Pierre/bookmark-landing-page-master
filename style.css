@@ -812,7 +812,7 @@ footer{
         gap: 1rem;
 
         li a{
-            color: var(--neutral-white);
+            color: #FFF;
             transition: 0.3s;
 
             &:hover{
