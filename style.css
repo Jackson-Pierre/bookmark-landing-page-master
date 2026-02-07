@@ -676,3 +676,15 @@ li{
     margin-bottom: 1rem;
     font-weight: 400;
 }
+
+@media (max-width: 900px) {
+    .container-faq{
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .btn-faq{
+        font-size: 0.8rem;
+    }
+}
