@@ -288,19 +288,6 @@ li{
     }
 }
 
-@media (max-width: 965px) {
-    .container-hero{
-        flex-direction: column-reverse;
-        padding: 2rem;
-        margin-top: 4rem;
-        text-align: center;
-    }
-
-    .buttons-hero{
-        justify-content: center;
-    }
-}
-
 #features{
     display: flex;
     gap: 5rem;
@@ -341,6 +328,12 @@ li{
     font-weight: 500;
 }
 
+.secondary-text{
+        color: var(--secondary-color-font);
+        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+        font-weight: 400;
+    }
+
 .buttons-features{
     display: flex;
     gap: 1.5rem;
@@ -353,6 +346,11 @@ li{
     font-size: 1rem;
     cursor: pointer;
     font-weight: 400;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        color: var(--secondary-color);
+    }
 }
 
 .btn-features-one.active, .btn-features-two.active, .btn-features-three.active{
@@ -378,4 +376,51 @@ li{
 
 .cards-features-one.active, .cards-features-two.active, .cards-features-three.active{
     display: flex;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0rem 6rem;
+    gap: 6rem;
+}
+
+.text-features-card{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.image-features-card{
+    width: 100%;
+    position: relative;
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 75%;
+        height: clamp(10rem, 22vw, 28rem);
+        top: clamp(18%, 25vw, 25%);
+        left: clamp(-6rem, -9vw, -2rem);
+        z-index: -1;
+        border-radius: 0 50rem 50rem 0;
+        background: var(--primary-color);
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 965px) {
+    .container-hero{
+        flex-direction: column-reverse;
+        padding: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    .buttons-hero{
+        justify-content: center;
+    }
 }

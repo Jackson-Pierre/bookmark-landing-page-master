@@ -31,32 +31,30 @@ function openMenu() {
     nav.classList.toggle('active');
 }
 
-function showFeaturesOne(){
-    btn1.classList.add('active');
-    btn2.classList.remove('active');
-    btn3.classList.remove('active');
-    div1.classList.add('active');
-    div2.classList.remove('active');
-    div3.classList.remove('active');
-}
-
-function showFeaturesTwo(){
-    btn1.classList.remove('active');
-    btn2.classList.add('active');
-    btn3.classList.remove('active');
-    div1.classList.remove('active');
-    div2.classList.add('active');
-    div3.classList.remove('active');
-}
-
-function showFeaturesThree(){
-    btn1.classList.remove('active');
-    btn2.classList.remove('active');
-    btn3.classList.add('active');
-    div1.classList.remove('active');
-    div2.classList.remove('active');
-    div3.classList.add('active');
-}
+function showFeatures(item) {
+    if (item == 'one') {
+        btn1.classList.add('active');
+        btn2.classList.remove('active');
+        btn3.classList.remove('active');
+        div1.classList.add('active');
+        div2.classList.remove('active');
+        div3.classList.remove('active');
+}else if (item == 'two') {
+        btn1.classList.remove('active');
+        btn2.classList.add('active');
+        btn3.classList.remove('active');
+        div1.classList.remove('active');
+        div2.classList.add('active');
+        div3.classList.remove('active');
+}else if (item == 'three') {
+        btn1.classList.remove('active');
+        btn2.classList.remove('active');
+        btn3.classList.add('active');
+        div1.classList.remove('active');
+        div2.classList.remove('active');
+        div3.classList.add('active');
+    }
+};
 
 btnTheme.addEventListener('click', toggleTheme)
 btnHamburguer.addEventListener('click', openMenu)
