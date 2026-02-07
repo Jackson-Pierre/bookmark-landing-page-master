@@ -195,12 +195,46 @@ vitae neque eget nisl gravida pellentesque non ut velit.</p>
   <div class="content-contact">
     <p>Mais de 35.000 já aderiram</p>
     <h2>Mantenha-se atualizado com o que estamos fazendo</h2>
-    <form>  
-      <input type="text" placeholder="Endereço de e-mail">
-      <button class="btn-ctct">Contate-nos</button>
+
+    <form id="form-contact" novalidate>
+      <div class="input-group">
+        <input 
+          type="email" 
+          id="email"
+          placeholder="Endereço de e-mail"
+          required
+        >
+        <span class="error-message">
+          Por favor, insira um email válido
+        </span>
+      </div>
+
+      <button class="btn-ctct" type="submit">
+        Contate-nos
+      </button>
     </form>
   </div>
 </section>
+
+<footer>
+  <div class="footer">
+    <div class="footer-links">
+      <img
+        class="logo-header"
+        src="./images/logo-bookmark-white.svg"
+        alt="Logo">
+      <ul class="footer-list">
+        <li><a href="#features">Funcionalidades</a></li>
+        <li><a href="#pricing">Preços</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </div>
+    <div class="social-media">
+      <a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a>
+      <a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a>
+    </div>
+  </div>
+</footer>
 
 </body>
 <script src="script.js"></script>

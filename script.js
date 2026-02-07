@@ -12,6 +12,10 @@ const btn1 = document.querySelector('.btn-features-one');
 const btn2 = document.querySelector('.btn-features-two');
 const btn3 = document.querySelector('.btn-features-three');
 
+const form = document.getElementById("form-contact");
+const inputEmail = document.getElementById("email");
+const btnSubmit = document.querySelector('.btn-ctct');
+
 function toggleTheme() {
     const logoTheme = document.querySelector('.logo-theme');
     const logoHeader = document.querySelector('.logo-header');
@@ -71,5 +75,27 @@ function showAnswer(render){
     });
 }
 
+
+
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const email = inputEmail.value.trim();
+
+    if(email === "" || !inputEmail.checkValidity()){
+        inputEmail.classList.add("error");
+    }else{
+        inputEmail.classList.remove("error");
+        form.submit();
+    }
+});
+
+inputEmail.addEventListener("input", function(){
+    if(inputEmail.checkValidity()){
+        inputEmail.classList.remove("error");
+    }
+});
+
 btnTheme.addEventListener('click', toggleTheme)
 btnHamburguer.addEventListener('click', openMenu)
+btnSubmit.addEventListener("click", verification);

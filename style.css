@@ -725,12 +725,38 @@ form{
     gap: 1rem;
 }
 
-input{
+.input-group{
+    position: relative;
+    width: 60%;
+}
+
+.input-group input{
     border: none;
     padding: 0.8rem;
     border-radius: 5px;
-    margin-bottom: 0.5rem;
-    width: 60%;
+    width: 100%;
+    outline: none;
+}
+
+.input-group input.error{
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 30px 0 0 var(--secondary-color);
+}
+
+.error-message{
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+    width: 100%;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: white;
+    padding-left: 0.6rem;
+    display: none;
+}
+
+.input-group input.error + .error-message{
+    display: block;
 }
 
 .btn-ctct{
@@ -742,4 +768,78 @@ input{
     background-color: var(--secondary-color);
     color: var(--theme);
     cursor: pointer;
+
+    &:hover{
+        background: #FFF;
+        border: 2px solid var(--secondary-color);
+        color: var(--secondary-color);
+    }
+}
+
+@media (max-width: 400px) {
+    .content-contact h2{
+        max-width: 270px;
+        font-size: 1rem;
+    }
+
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 0%, 0.89);
+    width: 100%;
+    max-width: 1440px;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0 1rem 0;
+}
+
+.footer-links{
+    display: flex;
+    gap: 2rem;
+
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        li a{
+            color: var(--neutral-white);
+            transition: 0.3s;
+
+            &:hover{
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+
+.social-media {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (max-width: 630px) {
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer-links{
+    flex-direction: column;
+
+    ul{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}
 }
