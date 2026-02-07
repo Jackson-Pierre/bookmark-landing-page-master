@@ -12,10 +12,12 @@
 </head>
 <body>
   <header class="header">
-  <img
-    class="logo-header"
-    src="./images/logo-bookmark.svg"
-    alt="Logo">
+  <a href="#home">
+    <img
+      class="logo-header"
+      src="./images/logo-bookmark.svg"
+      alt="Logo">
+  </a>
 
   <button class="btn-hamburguer" id="btn-hamburguer">
     <span></span>
@@ -37,7 +39,7 @@
   </div>
 </header>
 
-<main class="container-hero">
+<main id="home" class="container-hero">
   <section class="content-hero">
     <h1>Um gerenciador de favoritos simples</h1>
     <p>Uma interface limpa e simples para organizar seus sites favoritos. 
@@ -99,6 +101,46 @@
   </div>
   
 </section>
+
+<section id="pricing">
+  <div class="content-pricing">
+    <h2 class="subTitle">Baixe a extensão</h2>
+    <p class="secondary-text">Temos mais navegadores em desenvolvimento. Informe-nos se você tem um favorito que gostaria que priorizássemos.</p>
+  </div>
+
+  <div class="cards-pricing-add">
+    <div class="card-pricing">
+      <div class="image-pricing"><img src="./images/logo-chrome.svg" alt="logo chrome"></div>
+      <div class="text-pricing">
+        <h3>Adicionar ao Chrome</h3>
+        <p>Versão mínima 62</p>
+      </div>
+      <div class="bg-dots"><img src="./images/bg-dots.svg"></div>
+      <button class="main-btn">Adicionar e instalar extensão</button>
+    </div>
+
+    <div class="card-pricing firefox">
+      <div class="image-pricing"><img src="./images/logo-firefox.svg" alt="logo firefox"></div>
+      <div class="text-pricing">
+        <h3>Adicionar ao Firefox</h3>
+        <p>Versão mínima 55</p>
+      </div>
+      <div class="bg-dots"><img src="./images/bg-dots.svg"></div>
+      <button class="main-btn">Adicionar e instalar extensão</button>
+    </div>
+
+    <div class="card-pricing opera">
+      <div class="image-pricing"><img src="./images/logo-opera.svg" alt="logo opera"></div>
+      <div class="text-pricing">
+        <h3>Adicionar ao Opera</h3>
+        <p>Versão mínima 46</p>
+      </div>
+      <div class="bg-dots"><img src="./images/bg-dots.svg"></div>
+      <button class="main-btn">Adicionar e instalar extensão</button>
+    </div>
+  </div>
+</section>
+
 </body>
 <script src="script.js"></script>
 </html>
