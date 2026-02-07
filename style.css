@@ -20,6 +20,7 @@ html {
     --primary-color-font: hsl(251, 100%, 3%);
     --secondary-color-font: hsla(0, 0%, 0%, 0.6);
     --inversor-font: hsl(0, 0%, 100%);
+    --header-background: hsla(245, 33%, 61%, 0.884);
 }
 
 body.dark {
@@ -29,6 +30,7 @@ body.dark {
     --primary-color: hsl(231, 98%, 52%);
     --neutral-white: hsla(243, 100%, 19%, 0.507);
     --neutral-gray: hsl(229, 50%, 70%);
+    --header-background: hsla(0, 0%, 0%, 0.884);
 }
 
 body {
@@ -140,11 +142,16 @@ li{
         position: fixed;
         top: 0;
         right: 0;
-        background: hsla(0, 0%, 0%, 0.45);
+        background: var(--header-background);
         width: 100%;
         height: 100vh;
         padding: 20px;
         display: none;
+        backdrop-filter: blur(6px);
+    }
+
+    .logo-header{
+        z-index: 160;
     }
 
     .header-content nav.active {
@@ -265,6 +272,11 @@ li{
         background-color: transparent;
     }
 }
+@media (max-width: 630px) {
+    .main-btn, .btn-firefox{
+        font-size: 0.5rem;
+    }
+}   
 
 .image-hero{
     width: 100%;
@@ -291,7 +303,7 @@ li{
 #features{
     display: flex;
     gap: 5rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
     flex-direction: column;
     max-width: 1400px;
 }
@@ -324,14 +336,20 @@ li{
 
 .subTitle{
     color: var(--primary-color-font);
-    font-size: clamp(1.2rem, 2vw, 2.2rem);
+    font-size: clamp(1rem, 2vw, 2.2rem);
     font-weight: 500;
 }
 
 .secondary-text{
         color: var(--secondary-color-font);
-        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+        font-size: clamp(0.6rem, 1.5vw, 1.2rem);
         font-weight: 400;
+    }
+
+    @media(max-width: 800px) {
+        .text-features{
+            max-width: 70%;
+        }
     }
 
 .buttons-features{
@@ -398,10 +416,10 @@ li{
         content: "";
         display: block;
         position: absolute;
-        width: 75%;
-        height: clamp(10rem, 22vw, 28rem);
-        top: clamp(18%, 25vw, 25%);
-        left: clamp(-6rem, -9vw, -2rem);
+        width: 120%;
+        height: clamp(8rem, 22vw, 28rem);
+        top: clamp(10%, 25vw, 18%);
+        left: clamp(-6rem, -10vw, -28rem);
         z-index: -1;
         border-radius: 0 50rem 50rem 0;
         background: var(--primary-color);
@@ -422,5 +440,39 @@ li{
 
     .buttons-hero{
         justify-content: center;
+    }
+
+    .buttons-features{
+        flex-direction: column;
+        position: relative;
+    }
+
+    .btn-features-one, .btn-features-two, .btn-features-three{
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: var(--neutral-white);
+            margin-top: 0.85rem;
+        }
+    }
+    .content-features{
+    &::after{
+        width: 0;
+        height: 0;
+    }
+}
+
+    .cards-features-one.active, .cards-features-two.active, .cards-features-three.active{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .text-features-card{
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
     }
 }
