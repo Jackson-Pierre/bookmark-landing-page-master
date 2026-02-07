@@ -56,5 +56,20 @@ function showFeatures(item) {
     }
 };
 
+function showAnswer(render){
+    const buttonsFaq = document.querySelectorAll('.btn-faq');
+    const answerAtual = render.nextElementSibling.querySelector('.answer');
+
+    buttonsFaq.forEach(btn => {
+        const answer = btn.nextElementSibling.querySelector('.answer');
+
+        if (answer !== answerAtual) {
+            answer.classList.remove('active');
+        }else{
+            answer.classList.toggle('active');
+        }
+    });
+}
+
 btnTheme.addEventListener('click', toggleTheme)
 btnHamburguer.addEventListener('click', openMenu)
